@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .image-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .image-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        
+        .image-item a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+        
+        .image-item img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .image-item .filename {
+            font-size: 0.9em;
+            color: #555;
+            word-break: break-word;
+            line-height: 1.4;
+        }
+        
+        .stats {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍷 Wine Image Gallery</h1>
+        <div class="stats">Total Images: <strong>100</strong></div>
+        <div class="gallery">
+            <div class="image-item">
+                <a href="AGLIANICO_(PAESTUM_IGP_2021).png" target="_blank">
+                    <img src="AGLIANICO_(PAESTUM_IGP_2021).png" alt="AGLIANICO_(PAESTUM_IGP_2021)">
+                    <div class="filename">AGLIANICO_(PAESTUM_IGP_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="AGLIANICO_DEL_VULTURE_(VULTURE_DOC_2018).png" target="_blank">
+                    <img src="AGLIANICO_DEL_VULTURE_(VULTURE_DOC_2018).png" alt="AGLIANICO_DEL_VULTURE_(VULTURE_DOC_2018)">
+                    <div class="filename">AGLIANICO_DEL_VULTURE_(VULTURE_DOC_2018).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="AGLIANICO_DEL_VULTURE_(VULTURE_DOC_2021).png" target="_blank">
+                    <img src="AGLIANICO_DEL_VULTURE_(VULTURE_DOC_2021).png" alt="AGLIANICO_DEL_VULTURE_(VULTURE_DOC_2021)">
+                    <div class="filename">AGLIANICO_DEL_VULTURE_(VULTURE_DOC_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ASSISI_ROSSO_(ASSISI_DOC_2022).png" target="_blank">
+                    <img src="ASSISI_ROSSO_(ASSISI_DOC_2022).png" alt="ASSISI_ROSSO_(ASSISI_DOC_2022)">
+                    <div class="filename">ASSISI_ROSSO_(ASSISI_DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ASTI_(ASTI_DOCG_2021).png" target="_blank">
+                    <img src="ASTI_(ASTI_DOCG_2021).png" alt="ASTI_(ASTI_DOCG_2021)">
+                    <div class="filename">ASTI_(ASTI_DOCG_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="BARBARESCO_(COMUNE_NEIVE_2021).png" target="_blank">
+                    <img src="BARBARESCO_(COMUNE_NEIVE_2021).png" alt="BARBARESCO_(COMUNE_NEIVE_2021)">
+                    <div class="filename">BARBARESCO_(COMUNE_NEIVE_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="BARBARESCO_(PRODUTTORI_DEL_BARESCO_2020).png" target="_blank">
+                    <img src="BARBARESCO_(PRODUTTORI_DEL_BARESCO_2020).png" alt="BARBARESCO_(PRODUTTORI_DEL_BARESCO_2020)">
+                    <div class="filename">BARBARESCO_(PRODUTTORI_DEL_BARESCO_2020).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="BARBARESCO_MGA_LORETO_(COMUNE_BARBARESCO_2020).png" target="_blank">
+                    <img src="BARBARESCO_MGA_LORETO_(COMUNE_BARBARESCO_2020).png" alt="BARBARESCO_MGA_LORETO_(COMUNE_BARBARESCO_2020)">
+                    <div class="filename">BARBARESCO_MGA_LORETO_(COMUNE_BARBARESCO_2020).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="BONARDA_(OLTREPO_PAVESE_DOC_2021).png" target="_blank">
+                    <img src="BONARDA_(OLTREPO_PAVESE_DOC_2021).png" alt="BONARDA_(OLTREPO_PAVESE_DOC_2021)">
+                    <div class="filename">BONARDA_(OLTREPO_PAVESE_DOC_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="BRUNELLO_(BIONDI_SANTI)_2.png" target="_blank">
+                    <img src="BRUNELLO_(BIONDI_SANTI)_2.png" alt="BRUNELLO_(BIONDI_SANTI)_2">
+                    <div class="filename">BRUNELLO_(BIONDI_SANTI)_2.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="BRUNELLO_(CIACCI).png" target="_blank">
+                    <img src="BRUNELLO_(CIACCI).png" alt="BRUNELLO_(CIACCI)">
+                    <div class="filename">BRUNELLO_(CIACCI).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="BRUNELLO_(FASSACOLLE).png" target="_blank">
+                    <img src="BRUNELLO_(FASSACOLLE).png" alt="BRUNELLO_(FASSACOLLE)">
+                    <div class="filename">BRUNELLO_(FASSACOLLE).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="BRUNELLO_DI_MONTALCINO(VITANZA).png" target="_blank">
+                    <img src="BRUNELLO_DI_MONTALCINO(VITANZA).png" alt="BRUNELLO_DI_MONTALCINO(VITANZA)">
+                    <div class="filename">BRUNELLO_DI_MONTALCINO(VITANZA).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="BRUT_(BERLUCCHI).png" target="_blank">
+                    <img src="BRUT_(BERLUCCHI).png" alt="BRUT_(BERLUCCHI)">
+                    <div class="filename">BRUT_(BERLUCCHI).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CANNONAU_(SARDEGNA_2020ALGHERO).png" target="_blank">
+                    <img src="CANNONAU_(SARDEGNA_2020ALGHERO).png" alt="CANNONAU_(SARDEGNA_2020ALGHERO)">
+                    <div class="filename">CANNONAU_(SARDEGNA_2020ALGHERO).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CARIGNANO_DEL_SULCIS_(SULCIS_DOC_2022).png" target="_blank">
+                    <img src="CARIGNANO_DEL_SULCIS_(SULCIS_DOC_2022).png" alt="CARIGNANO_DEL_SULCIS_(SULCIS_DOC_2022)">
+                    <div class="filename">CARIGNANO_DEL_SULCIS_(SULCIS_DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CERASUOLO_DI_VITTORIA_(CERASUOLO_VITTORIA_DOCG_2021).png" target="_blank">
+                    <img src="CERASUOLO_DI_VITTORIA_(CERASUOLO_VITTORIA_DOCG_2021).png" alt="CERASUOLO_DI_VITTORIA_(CERASUOLO_VITTORIA_DOCG_2021)">
+                    <div class="filename">CERASUOLO_DI_VITTORIA_(CERASUOLO_VITTORIA_DOCG_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CESANESE_DEL_PIGLIO_(PIGLIO_DOCG_2023).png" target="_blank">
+                    <img src="CESANESE_DEL_PIGLIO_(PIGLIO_DOCG_2023).png" alt="CESANESE_DEL_PIGLIO_(PIGLIO_DOCG_2023)">
+                    <div class="filename">CESANESE_DEL_PIGLIO_(PIGLIO_DOCG_2023).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CHIANTI_CLASSICO_(BRANCAIA_2023).png" target="_blank">
+                    <img src="CHIANTI_CLASSICO_(BRANCAIA_2023).png" alt="CHIANTI_CLASSICO_(BRANCAIA_2023)">
+                    <div class="filename">CHIANTI_CLASSICO_(BRANCAIA_2023).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CHIANTI_CLASSICO_(CHIANTI_CLASSICO_DOCG_2022)_2.png" target="_blank">
+                    <img src="CHIANTI_CLASSICO_(CHIANTI_CLASSICO_DOCG_2022)_2.png" alt="CHIANTI_CLASSICO_(CHIANTI_CLASSICO_DOCG_2022)_2">
+                    <div class="filename">CHIANTI_CLASSICO_(CHIANTI_CLASSICO_DOCG_2022)_2.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CHIANTI_CLASSICO_(GRAN_SELEZIONE_DOCG_2021).png" target="_blank">
+                    <img src="CHIANTI_CLASSICO_(GRAN_SELEZIONE_DOCG_2021).png" alt="CHIANTI_CLASSICO_(GRAN_SELEZIONE_DOCG_2021)">
+                    <div class="filename">CHIANTI_CLASSICO_(GRAN_SELEZIONE_DOCG_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CHIANTI_CLASSICO_GRAN_SELEZIONE_(DOCG_2018FIRENZE).png" target="_blank">
+                    <img src="CHIANTI_CLASSICO_GRAN_SELEZIONE_(DOCG_2018FIRENZE).png" alt="CHIANTI_CLASSICO_GRAN_SELEZIONE_(DOCG_2018FIRENZE)">
+                    <div class="filename">CHIANTI_CLASSICO_GRAN_SELEZIONE_(DOCG_2018FIRENZE).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CHIANTI_CLASSICO_GRAN_SELEZIONE_(DOCG_2019).png" target="_blank">
+                    <img src="CHIANTI_CLASSICO_GRAN_SELEZIONE_(DOCG_2019).png" alt="CHIANTI_CLASSICO_GRAN_SELEZIONE_(DOCG_2019)">
+                    <div class="filename">CHIANTI_CLASSICO_GRAN_SELEZIONE_(DOCG_2019).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CHIANTI_CLASSICO_RISERVA_(DOCG_2021).png" target="_blank">
+                    <img src="CHIANTI_CLASSICO_RISERVA_(DOCG_2021).png" alt="CHIANTI_CLASSICO_RISERVA_(DOCG_2021)">
+                    <div class="filename">CHIANTI_CLASSICO_RISERVA_(DOCG_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CHIANTI_SUPERIORE_(DOCG_2018).png" target="_blank">
+                    <img src="CHIANTI_SUPERIORE_(DOCG_2018).png" alt="CHIANTI_SUPERIORE_(DOCG_2018)">
+                    <div class="filename">CHIANTI_SUPERIORE_(DOCG_2018).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CILIEGIOLO_(LAZIO_IGT_2020VELLETRI).png" target="_blank">
+                    <img src="CILIEGIOLO_(LAZIO_IGT_2020VELLETRI).png" alt="CILIEGIOLO_(LAZIO_IGT_2020VELLETRI)">
+                    <div class="filename">CILIEGIOLO_(LAZIO_IGT_2020VELLETRI).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CIRO_DUCA_SAN_FELICE_RISERVA_(CIRO_DOC_2021).png" target="_blank">
+                    <img src="CIRO_DUCA_SAN_FELICE_RISERVA_(CIRO_DOC_2021).png" alt="CIRO_DUCA_SAN_FELICE_RISERVA_(CIRO_DOC_2021)">
+                    <div class="filename">CIRO_DUCA_SAN_FELICE_RISERVA_(CIRO_DOC_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="CIRO_RISERVA_(CIRO_DOC_2015).png" target="_blank">
+                    <img src="CIRO_RISERVA_(CIRO_DOC_2015).png" alt="CIRO_RISERVA_(CIRO_DOC_2015)">
+                    <div class="filename">CIRO_RISERVA_(CIRO_DOC_2015).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="DONNAS_PICOTENDRO_(VALLE_DAOSTE_DOC_2019).png" target="_blank">
+                    <img src="DONNAS_PICOTENDRO_(VALLE_DAOSTE_DOC_2019).png" alt="DONNAS_PICOTENDRO_(VALLE_DAOSTE_DOC_2019)">
+                    <div class="filename">DONNAS_PICOTENDRO_(VALLE_DAOSTE_DOC_2019).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ETNA_ROSSO_(ETNA_BENNATI_DOC_2022).png" target="_blank">
+                    <img src="ETNA_ROSSO_(ETNA_BENNATI_DOC_2022).png" alt="ETNA_ROSSO_(ETNA_BENNATI_DOC_2022)">
+                    <div class="filename">ETNA_ROSSO_(ETNA_BENNATI_DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ETNA_ROSSO_(ETNA_TORNATORE_DOC_2021).png" target="_blank">
+                    <img src="ETNA_ROSSO_(ETNA_TORNATORE_DOC_2021).png" alt="ETNA_ROSSO_(ETNA_TORNATORE_DOC_2021)">
+                    <div class="filename">ETNA_ROSSO_(ETNA_TORNATORE_DOC_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ETNA_ROSSO_(SICILIA_IDDA).png" target="_blank">
+                    <img src="ETNA_ROSSO_(SICILIA_IDDA).png" alt="ETNA_ROSSO_(SICILIA_IDDA)">
+                    <div class="filename">ETNA_ROSSO_(SICILIA_IDDA).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="FRANCIACORTA_(FRANCIACORTA_DOCG).png" target="_blank">
+                    <img src="FRANCIACORTA_(FRANCIACORTA_DOCG).png" alt="FRANCIACORTA_(FRANCIACORTA_DOCG)">
+                    <div class="filename">FRANCIACORTA_(FRANCIACORTA_DOCG).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="FRANCIACORTA_BRUT_(FRANCIACORTA_DOCG)_1.png" target="_blank">
+                    <img src="FRANCIACORTA_BRUT_(FRANCIACORTA_DOCG)_1.png" alt="FRANCIACORTA_BRUT_(FRANCIACORTA_DOCG)_1">
+                    <div class="filename">FRANCIACORTA_BRUT_(FRANCIACORTA_DOCG)_1.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="FRAPPATO_(TERRE_SICILIANE_2023RAGUSA).png" target="_blank">
+                    <img src="FRAPPATO_(TERRE_SICILIANE_2023RAGUSA).png" alt="FRAPPATO_(TERRE_SICILIANE_2023RAGUSA)">
+                    <div class="filename">FRAPPATO_(TERRE_SICILIANE_2023RAGUSA).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="FUMIN_(VALLE_DAOSTE_DOC_2021).png" target="_blank">
+                    <img src="FUMIN_(VALLE_DAOSTE_DOC_2021).png" alt="FUMIN_(VALLE_DAOSTE_DOC_2021)">
+                    <div class="filename">FUMIN_(VALLE_DAOSTE_DOC_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="GRAGNANO_(SORRENTINA_IGP_2022).png" target="_blank">
+                    <img src="GRAGNANO_(SORRENTINA_IGP_2022).png" alt="GRAGNANO_(SORRENTINA_IGP_2022)">
+                    <div class="filename">GRAGNANO_(SORRENTINA_IGP_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="GRECO_DI_MATERA_2023.png" target="_blank">
+                    <img src="GRECO_DI_MATERA_2023.png" alt="GRECO_DI_MATERA_2023">
+                    <div class="filename">GRECO_DI_MATERA_2023.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="GUADO_AL_TASSO_IL_BRUCIATO_(BOLGHERI_DOC_2023).png" target="_blank">
+                    <img src="GUADO_AL_TASSO_IL_BRUCIATO_(BOLGHERI_DOC_2023).png" alt="GUADO_AL_TASSO_IL_BRUCIATO_(BOLGHERI_DOC_2023)">
+                    <div class="filename">GUADO_AL_TASSO_IL_BRUCIATO_(BOLGHERI_DOC_2023).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="INFERNO_(NINO_NEGRI_2020).png" target="_blank">
+                    <img src="INFERNO_(NINO_NEGRI_2020).png" alt="INFERNO_(NINO_NEGRI_2020)">
+                    <div class="filename">INFERNO_(NINO_NEGRI_2020).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ISCHIA_ROSSO_(ISCHIA_DOC_2023).png" target="_blank">
+                    <img src="ISCHIA_ROSSO_(ISCHIA_DOC_2023).png" alt="ISCHIA_ROSSO_(ISCHIA_DOC_2023)">
+                    <div class="filename">ISCHIA_ROSSO_(ISCHIA_DOC_2023).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="LACRIMA_DI_MORRA_(MORRA_DALBA_DOC_2022).png" target="_blank">
+                    <img src="LACRIMA_DI_MORRA_(MORRA_DALBA_DOC_2022).png" alt="LACRIMA_DI_MORRA_(MORRA_DALBA_DOC_2022)">
+                    <div class="filename">LACRIMA_DI_MORRA_(MORRA_DALBA_DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="LACRIMA_DI_MORRO_DALBA_(LACRIMA_DI_MORRO_DOC_2022).png" target="_blank">
+                    <img src="LACRIMA_DI_MORRO_DALBA_(LACRIMA_DI_MORRO_DOC_2022).png" alt="LACRIMA_DI_MORRO_DALBA_(LACRIMA_DI_MORRO_DOC_2022)">
+                    <div class="filename">LACRIMA_DI_MORRO_DALBA_(LACRIMA_DI_MORRO_DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="LACRYMA_CHRISTI_(VESUVIO_DOC_2021).png" target="_blank">
+                    <img src="LACRYMA_CHRISTI_(VESUVIO_DOC_2021).png" alt="LACRYMA_CHRISTI_(VESUVIO_DOC_2021)">
+                    <div class="filename">LACRYMA_CHRISTI_(VESUVIO_DOC_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="LACRYMA_CHRISTI_VESUSVIO_DOC_2022.png" target="_blank">
+                    <img src="LACRYMA_CHRISTI_VESUSVIO_DOC_2022.png" alt="LACRYMA_CHRISTI_VESUSVIO_DOC_2022">
+                    <div class="filename">LACRYMA_CHRISTI_VESUSVIO_DOC_2022.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="LAMBRUSCO_(NICCHIA).png" target="_blank">
+                    <img src="LAMBRUSCO_(NICCHIA).png" alt="LAMBRUSCO_(NICCHIA)">
+                    <div class="filename">LAMBRUSCO_(NICCHIA).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="LIPERI_(TERRE_SICILIANE_IGT_2020).png" target="_blank">
+                    <img src="LIPERI_(TERRE_SICILIANE_IGT_2020).png" alt="LIPERI_(TERRE_SICILIANE_IGT_2020)">
+                    <div class="filename">LIPERI_(TERRE_SICILIANE_IGT_2020).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="LUGANA_(LUGANA_DOC_2024).png" target="_blank">
+                    <img src="LUGANA_(LUGANA_DOC_2024).png" alt="LUGANA_(LUGANA_DOC_2024)">
+                    <div class="filename">LUGANA_(LUGANA_DOC_2024).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="MALVASIA_(COLLI_PIACENTINI).png" target="_blank">
+                    <img src="MALVASIA_(COLLI_PIACENTINI).png" alt="MALVASIA_(COLLI_PIACENTINI)">
+                    <div class="filename">MALVASIA_(COLLI_PIACENTINI).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="MALVASIA_(PIACENZA_DOC).png" target="_blank">
+                    <img src="MALVASIA_(PIACENZA_DOC).png" alt="MALVASIA_(PIACENZA_DOC)">
+                    <div class="filename">MALVASIA_(PIACENZA_DOC).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="MALVASIA_(PIACENZA_DOC)_3.png" target="_blank">
+                    <img src="MALVASIA_(PIACENZA_DOC)_3.png" alt="MALVASIA_(PIACENZA_DOC)_3">
+                    <div class="filename">MALVASIA_(PIACENZA_DOC)_3.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="MONTEFALCO_ROSSO_(MONTEFALCO_DOC_2022).png" target="_blank">
+                    <img src="MONTEFALCO_ROSSO_(MONTEFALCO_DOC_2022).png" alt="MONTEFALCO_ROSSO_(MONTEFALCO_DOC_2022)">
+                    <div class="filename">MONTEFALCO_ROSSO_(MONTEFALCO_DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="MONTEPULCIANO_(ABRUZZO_DOC_2015TERAMO).png" target="_blank">
+                    <img src="MONTEPULCIANO_(ABRUZZO_DOC_2015TERAMO).png" alt="MONTEPULCIANO_(ABRUZZO_DOC_2015TERAMO)">
+                    <div class="filename">MONTEPULCIANO_(ABRUZZO_DOC_2015TERAMO).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="MONTEPULCIANO_(COLLINE_TERAMANE_DOCG_2022).png" target="_blank">
+                    <img src="MONTEPULCIANO_(COLLINE_TERAMANE_DOCG_2022).png" alt="MONTEPULCIANO_(COLLINE_TERAMANE_DOCG_2022)">
+                    <div class="filename">MONTEPULCIANO_(COLLINE_TERAMANE_DOCG_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="MONTEPULCIANO_RISERVA_DON_LUIGI_(MOLISE_DOC_2019MARTAROSA).png" target="_blank">
+                    <img src="MONTEPULCIANO_RISERVA_DON_LUIGI_(MOLISE_DOC_2019MARTAROSA).png" alt="MONTEPULCIANO_RISERVA_DON_LUIGI_(MOLISE_DOC_2019MARTAROSA)">
+                    <div class="filename">MONTEPULCIANO_RISERVA_DON_LUIGI_(MOLISE_DOC_2019MARTAROSA).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="NEGROAMARO_RISERVA_(SALICE_SALENTINO_DOC_2020).png" target="_blank">
+                    <img src="NEGROAMARO_RISERVA_(SALICE_SALENTINO_DOC_2020).png" alt="NEGROAMARO_RISERVA_(SALICE_SALENTINO_DOC_2020)">
+                    <div class="filename">NEGROAMARO_RISERVA_(SALICE_SALENTINO_DOC_2020).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="NERO_DAVOLA_(SICILIA_DOC_2022TRAPANI).png" target="_blank">
+                    <img src="NERO_DAVOLA_(SICILIA_DOC_2022TRAPANI).png" alt="NERO_DAVOLA_(SICILIA_DOC_2022TRAPANI)">
+                    <div class="filename">NERO_DAVOLA_(SICILIA_DOC_2022TRAPANI).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="NERO_DI_TROIA_(MURGIA_IGT_2021CASTEL_DEL_MONTE).png" target="_blank">
+                    <img src="NERO_DI_TROIA_(MURGIA_IGT_2021CASTEL_DEL_MONTE).png" alt="NERO_DI_TROIA_(MURGIA_IGT_2021CASTEL_DEL_MONTE)">
+                    <div class="filename">NERO_DI_TROIA_(MURGIA_IGT_2021CASTEL_DEL_MONTE).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ODARI_ROSSO_(CALABRIA_IGT_2016LAMEZIA).png" target="_blank">
+                    <img src="ODARI_ROSSO_(CALABRIA_IGT_2016LAMEZIA).png" alt="ODARI_ROSSO_(CALABRIA_IGT_2016LAMEZIA)">
+                    <div class="filename">ODARI_ROSSO_(CALABRIA_IGT_2016LAMEZIA).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ORNELLAIA_BOLGHERI_SUPERIORE_(DOC_2021).png" target="_blank">
+                    <img src="ORNELLAIA_BOLGHERI_SUPERIORE_(DOC_2021).png" alt="ORNELLAIA_BOLGHERI_SUPERIORE_(DOC_2021)">
+                    <div class="filename">ORNELLAIA_BOLGHERI_SUPERIORE_(DOC_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ORNELLAIA_LE_VOLTE_(BOLGHERI_DOC_2022).png" target="_blank">
+                    <img src="ORNELLAIA_LE_VOLTE_(BOLGHERI_DOC_2022).png" alt="ORNELLAIA_LE_VOLTE_(BOLGHERI_DOC_2022)">
+                    <div class="filename">ORNELLAIA_LE_VOLTE_(BOLGHERI_DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="PETIT_VERDOT_(LAZIO_IGT_2022_LATINA).png" target="_blank">
+                    <img src="PETIT_VERDOT_(LAZIO_IGT_2022_LATINA).png" alt="PETIT_VERDOT_(LAZIO_IGT_2022_LATINA)">
+                    <div class="filename">PETIT_VERDOT_(LAZIO_IGT_2022_LATINA).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="PIGNOLETTO_(COLLI_BOLOGNESI_2022)_1.png" target="_blank">
+                    <img src="PIGNOLETTO_(COLLI_BOLOGNESI_2022)_1.png" alt="PIGNOLETTO_(COLLI_BOLOGNESI_2022)_1">
+                    <div class="filename">PIGNOLETTO_(COLLI_BOLOGNESI_2022)_1.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="PINOT_NOIR_(FRIULI_2021).png" target="_blank">
+                    <img src="PINOT_NOIR_(FRIULI_2021).png" alt="PINOT_NOIR_(FRIULI_2021)">
+                    <div class="filename">PINOT_NOIR_(FRIULI_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="PINOT_NOIR_(OTTIN).png" target="_blank">
+                    <img src="PINOT_NOIR_(OTTIN).png" alt="PINOT_NOIR_(OTTIN)">
+                    <div class="filename">PINOT_NOIR_(OTTIN).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="PINOT_NOIR_RED_ANGEL_(VENEZIA_GIULIA_IGT_2022).png" target="_blank">
+                    <img src="PINOT_NOIR_RED_ANGEL_(VENEZIA_GIULIA_IGT_2022).png" alt="PINOT_NOIR_RED_ANGEL_(VENEZIA_GIULIA_IGT_2022)">
+                    <div class="filename">PINOT_NOIR_RED_ANGEL_(VENEZIA_GIULIA_IGT_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="PRIMITIVO_DI_MANDURIA_(MANDURIA_DOC_2022).png" target="_blank">
+                    <img src="PRIMITIVO_DI_MANDURIA_(MANDURIA_DOC_2022).png" alt="PRIMITIVO_DI_MANDURIA_(MANDURIA_DOC_2022)">
+                    <div class="filename">PRIMITIVO_DI_MANDURIA_(MANDURIA_DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="PROSECCO_SUPERIORE_(VALDOBBIADINE_DOCG).png" target="_blank">
+                    <img src="PROSECCO_SUPERIORE_(VALDOBBIADINE_DOCG).png" alt="PROSECCO_SUPERIORE_(VALDOBBIADINE_DOCG)">
+                    <div class="filename">PROSECCO_SUPERIORE_(VALDOBBIADINE_DOCG).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ROSESE_DI_DOLCEACQUA_(DOLCEACQUA_DOC_2021).png" target="_blank">
+                    <img src="ROSESE_DI_DOLCEACQUA_(DOLCEACQUA_DOC_2021).png" alt="ROSESE_DI_DOLCEACQUA_(DOLCEACQUA_DOC_2021)">
+                    <div class="filename">ROSESE_DI_DOLCEACQUA_(DOLCEACQUA_DOC_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ROSSO_DI_MONTALCINO_(DOC_2022).png" target="_blank">
+                    <img src="ROSSO_DI_MONTALCINO_(DOC_2022).png" alt="ROSSO_DI_MONTALCINO_(DOC_2022)">
+                    <div class="filename">ROSSO_DI_MONTALCINO_(DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ROSSO_DI_MONTALCINO_(DOC_2023).png" target="_blank">
+                    <img src="ROSSO_DI_MONTALCINO_(DOC_2023).png" alt="ROSSO_DI_MONTALCINO_(DOC_2023)">
+                    <div class="filename">ROSSO_DI_MONTALCINO_(DOC_2023).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ROSSO_PICENO_(ROSSO_PICENO_DOC_2022ASCOLI).png" target="_blank">
+                    <img src="ROSSO_PICENO_(ROSSO_PICENO_DOC_2022ASCOLI).png" alt="ROSSO_PICENO_(ROSSO_PICENO_DOC_2022ASCOLI)">
+                    <div class="filename">ROSSO_PICENO_(ROSSO_PICENO_DOC_2022ASCOLI).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ROSSO_PICENO_SUPERIORE_(ROSSO_PICENO_DOC_2018ASCOLI).png" target="_blank">
+                    <img src="ROSSO_PICENO_SUPERIORE_(ROSSO_PICENO_DOC_2018ASCOLI).png" alt="ROSSO_PICENO_SUPERIORE_(ROSSO_PICENO_DOC_2018ASCOLI)">
+                    <div class="filename">ROSSO_PICENO_SUPERIORE_(ROSSO_PICENO_DOC_2018ASCOLI).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SAGRANTINO_(MONTEFALCO_DOC_2015).png" target="_blank">
+                    <img src="SAGRANTINO_(MONTEFALCO_DOC_2015).png" alt="SAGRANTINO_(MONTEFALCO_DOC_2015)">
+                    <div class="filename">SAGRANTINO_(MONTEFALCO_DOC_2015).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SAGRANTINO_(MONTEFALCO_DOC_2019).png" target="_blank">
+                    <img src="SAGRANTINO_(MONTEFALCO_DOC_2019).png" alt="SAGRANTINO_(MONTEFALCO_DOC_2019)">
+                    <div class="filename">SAGRANTINO_(MONTEFALCO_DOC_2019).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SAGRANTINO_(MONTEFALCO_DOC_2019)_2.png" target="_blank">
+                    <img src="SAGRANTINO_(MONTEFALCO_DOC_2019)_2.png" alt="SAGRANTINO_(MONTEFALCO_DOC_2019)_2">
+                    <div class="filename">SAGRANTINO_(MONTEFALCO_DOC_2019)_2.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SANGIOVESE_(ROMAGNA_DOC_2021).png" target="_blank">
+                    <img src="SANGIOVESE_(ROMAGNA_DOC_2021).png" alt="SANGIOVESE_(ROMAGNA_DOC_2021)">
+                    <div class="filename">SANGIOVESE_(ROMAGNA_DOC_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SANGIOVESE_ROMAGONLO_(PREDAPPIO_DOC_2022).png" target="_blank">
+                    <img src="SANGIOVESE_ROMAGONLO_(PREDAPPIO_DOC_2022).png" alt="SANGIOVESE_ROMAGONLO_(PREDAPPIO_DOC_2022)">
+                    <div class="filename">SANGIOVESE_ROMAGONLO_(PREDAPPIO_DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SANGIOVESE_ROMAGONLO_(PREDAPPIO_DOC_2022)_4.png" target="_blank">
+                    <img src="SANGIOVESE_ROMAGONLO_(PREDAPPIO_DOC_2022)_4.png" alt="SANGIOVESE_ROMAGONLO_(PREDAPPIO_DOC_2022)_4">
+                    <div class="filename">SANGIOVESE_ROMAGONLO_(PREDAPPIO_DOC_2022)_4.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SANGIOVESE_ROMAGONLO_RISERVA_(PREDAPPIO_DOC_2021).png" target="_blank">
+                    <img src="SANGIOVESE_ROMAGONLO_RISERVA_(PREDAPPIO_DOC_2021).png" alt="SANGIOVESE_ROMAGONLO_RISERVA_(PREDAPPIO_DOC_2021)">
+                    <div class="filename">SANGIOVESE_ROMAGONLO_RISERVA_(PREDAPPIO_DOC_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SASSICAIA_(TOSCANA_2019).png" target="_blank">
+                    <img src="SASSICAIA_(TOSCANA_2019).png" alt="SASSICAIA_(TOSCANA_2019)">
+                    <div class="filename">SASSICAIA_(TOSCANA_2019).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SCHIAVA_(ALTO_ADIGE_DOC_2023).png" target="_blank">
+                    <img src="SCHIAVA_(ALTO_ADIGE_DOC_2023).png" alt="SCHIAVA_(ALTO_ADIGE_DOC_2023)">
+                    <div class="filename">SCHIAVA_(ALTO_ADIGE_DOC_2023).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SOAVE_BRUT_MILLESIMATO_(SOAVE_2020).png" target="_blank">
+                    <img src="SOAVE_BRUT_MILLESIMATO_(SOAVE_2020).png" alt="SOAVE_BRUT_MILLESIMATO_(SOAVE_2020)">
+                    <div class="filename">SOAVE_BRUT_MILLESIMATO_(SOAVE_2020).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SOLAIA_(TOSCANA_2021).png" target="_blank">
+                    <img src="SOLAIA_(TOSCANA_2021).png" alt="SOLAIA_(TOSCANA_2021)">
+                    <div class="filename">SOLAIA_(TOSCANA_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SUPERTUSCAN_MODUS_(TOSCANA_IGT_2021).png" target="_blank">
+                    <img src="SUPERTUSCAN_MODUS_(TOSCANA_IGT_2021).png" alt="SUPERTUSCAN_MODUS_(TOSCANA_IGT_2021)">
+                    <div class="filename">SUPERTUSCAN_MODUS_(TOSCANA_IGT_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SUPERTUSCAN_NC_(TOSCANA_IGT_2023).png" target="_blank">
+                    <img src="SUPERTUSCAN_NC_(TOSCANA_IGT_2023).png" alt="SUPERTUSCAN_NC_(TOSCANA_IGT_2023)">
+                    <div class="filename">SUPERTUSCAN_NC_(TOSCANA_IGT_2023).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SUPERTUSCAN_TIGNANELLO_(TOSCANA_IGT_2019).png" target="_blank">
+                    <img src="SUPERTUSCAN_TIGNANELLO_(TOSCANA_IGT_2019).png" alt="SUPERTUSCAN_TIGNANELLO_(TOSCANA_IGT_2019)">
+                    <div class="filename">SUPERTUSCAN_TIGNANELLO_(TOSCANA_IGT_2019).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SUPERTUSCAN_TIGNANELLO_(TOSCANA_IGT_2020).png" target="_blank">
+                    <img src="SUPERTUSCAN_TIGNANELLO_(TOSCANA_IGT_2020).png" alt="SUPERTUSCAN_TIGNANELLO_(TOSCANA_IGT_2020)">
+                    <div class="filename">SUPERTUSCAN_TIGNANELLO_(TOSCANA_IGT_2020).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SUPER_SARDINIAN_BARRUA_(ISOLA_DEI_NURAGHI_2018).png" target="_blank">
+                    <img src="SUPER_SARDINIAN_BARRUA_(ISOLA_DEI_NURAGHI_2018).png" alt="SUPER_SARDINIAN_BARRUA_(ISOLA_DEI_NURAGHI_2018)">
+                    <div class="filename">SUPER_SARDINIAN_BARRUA_(ISOLA_DEI_NURAGHI_2018).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="SYRAH_LARCO_(LAZIO_IGT_2020).png" target="_blank">
+                    <img src="SYRAH_LARCO_(LAZIO_IGT_2020).png" alt="SYRAH_LARCO_(LAZIO_IGT_2020)">
+                    <div class="filename">SYRAH_LARCO_(LAZIO_IGT_2020).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="TAURASI_(TAURASI_DOCG_2017).png" target="_blank">
+                    <img src="TAURASI_(TAURASI_DOCG_2017).png" alt="TAURASI_(TAURASI_DOCG_2017)">
+                    <div class="filename">TAURASI_(TAURASI_DOCG_2017).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="TEROLDEGO_(DOLOMITI_IGT_2022).png" target="_blank">
+                    <img src="TEROLDEGO_(DOLOMITI_IGT_2022).png" alt="TEROLDEGO_(DOLOMITI_IGT_2022)">
+                    <div class="filename">TEROLDEGO_(DOLOMITI_IGT_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="TINTILIA_(MOLISE_DOC_2018CAMPOMARINO).png" target="_blank">
+                    <img src="TINTILIA_(MOLISE_DOC_2018CAMPOMARINO).png" alt="TINTILIA_(MOLISE_DOC_2018CAMPOMARINO)">
+                    <div class="filename">TINTILIA_(MOLISE_DOC_2018CAMPOMARINO).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="TORRETTE_SUPERIORE_(VALLE_DAOSTE_DOC_2022).png" target="_blank">
+                    <img src="TORRETTE_SUPERIORE_(VALLE_DAOSTE_DOC_2022).png" alt="TORRETTE_SUPERIORE_(VALLE_DAOSTE_DOC_2022)">
+                    <div class="filename">TORRETTE_SUPERIORE_(VALLE_DAOSTE_DOC_2022).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="VALPOLICELLA_SUPERIORE_(VALPOLICELLA_SUPERIORE_DOC_2018)_1.png" target="_blank">
+                    <img src="VALPOLICELLA_SUPERIORE_(VALPOLICELLA_SUPERIORE_DOC_2018)_1.png" alt="VALPOLICELLA_SUPERIORE_(VALPOLICELLA_SUPERIORE_DOC_2018)_1">
+                    <div class="filename">VALPOLICELLA_SUPERIORE_(VALPOLICELLA_SUPERIORE_DOC_2018)_1.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="VALTELLINA_CRU_SASSELA_(VALTELLINA_SUPERIORE_DOCG_2021).png" target="_blank">
+                    <img src="VALTELLINA_CRU_SASSELA_(VALTELLINA_SUPERIORE_DOCG_2021).png" alt="VALTELLINA_CRU_SASSELA_(VALTELLINA_SUPERIORE_DOCG_2021)">
+                    <div class="filename">VALTELLINA_CRU_SASSELA_(VALTELLINA_SUPERIORE_DOCG_2021).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="VERDECA_(SALENTO_IGT_2021)_1.png" target="_blank">
+                    <img src="VERDECA_(SALENTO_IGT_2021)_1.png" alt="VERDECA_(SALENTO_IGT_2021)_1">
+                    <div class="filename">VERDECA_(SALENTO_IGT_2021)_1.png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="VIGORELLO_(TOSCANA_IGT_2019).png" target="_blank">
+                    <img src="VIGORELLO_(TOSCANA_IGT_2019).png" alt="VIGORELLO_(TOSCANA_IGT_2019)">
+                    <div class="filename">VIGORELLO_(TOSCANA_IGT_2019).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ZIFANDEL_(MANDURIA_DOC_2023).png" target="_blank">
+                    <img src="ZIFANDEL_(MANDURIA_DOC_2023).png" alt="ZIFANDEL_(MANDURIA_DOC_2023)">
+                    <div class="filename">ZIFANDEL_(MANDURIA_DOC_2023).png</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="ZINFANDEL_(PUGLIA_IGP_2020).png" target="_blank">
+                    <img src="ZINFANDEL_(PUGLIA_IGP_2020).png" alt="ZINFANDEL_(PUGLIA_IGP_2020)">
+                    <div class="filename">ZINFANDEL_(PUGLIA_IGP_2020).png</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
